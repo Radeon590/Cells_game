@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <script src='js/cookieLib/cookie.js'></script>
-    <script src='js/game.js'></script>
-</body>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <! Fredoka One>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+        <link rel="stylesheet" href="game_style.css">
+        <script src='cells_flip.js'></script>
+
+        <title>Cells.</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="mainTitle">Cells.</p>
+            <p id="Score">Score: 0</p>
+                <div class="Cellscontainer">
+                    <div class="Cellsrow">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                    </div>
+                    <div class="Cellsrow">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                    </div>
+                    <div class="Cellsrow">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                    </div>
+                    <div class="Cellsrow">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                        <input class="Cells"type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerAnimation">
+            <ul class="boxes">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+
 </html>
