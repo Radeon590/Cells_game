@@ -74,6 +74,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+	user-select: none;
 }
 
 #Inputrow p {

@@ -226,3 +226,23 @@
 		opacity: 0;
 	}
 }
+
+.containerAnimation.DNK {
+	background-image: url('dnk.jpg');
+    background-position: center;
+    background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.Cells.DNK {
+    background-image: url('dnk2.jpg');
+    background-size: 150%;
+    background-position: center;
+}
+
+.Cells.Karp {
+    background-image: url('karp.jpg');
+    background-size: 150%;
+    background-position: center;
+}
