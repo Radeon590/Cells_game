@@ -228,7 +228,7 @@
 }
 
 .containerAnimation.DNK {
-	background-image: url('dnk.jpg');
+	background-image: url('/source/dnk.jpg');
     background-position: center;
     background-size: cover;
 	width: 100%;
@@ -236,13 +236,13 @@
 }
 
 .Cells.DNK {
-    background-image: url('dnk2.jpg');
+    background-image: url('/source/dnk2.jpg');
     background-size: 150%;
     background-position: center;
 }
 
 .Cells.Karp {
-    background-image: url('karp.jpg');
+    background-image: url('/source/karp.jpg');
     background-size: 150%;
     background-position: center;
 }
