@@ -4,6 +4,7 @@ let dnkSwitched = false;
 let lastCell = null;
 let savedCell = null;
 let idToReset = null;
+let score = 0;
 
 window.onload = main;
 
@@ -97,14 +98,16 @@ function initializeCells() {
 }
 
 function onCellClick() {
-    console.log('click');
+    let cooldownTime = 600;
+    clickCooldown(cooldownTime - 1);
     if (lastCell != null) {
         if (lastCell.id == this.id) {
-            setTimeout(disableCell, 1000);
+            savedCell = this;
+            setTimeout(markTrueCells, cooldownTime);
         }
         else {
             savedCell = this;
-            setTimeout(closeWrongCells, 1000);
+            setTimeout(closeWrongCells, cooldownTime);
         }
     }
     else {
@@ -112,19 +115,47 @@ function onCellClick() {
     }
 }
 
+function clickCooldown(length){
+    let cells = document.getElementsByClassName('Cells');
+    for(let i = 0; i < cells.length; i++) {
+        cells[i].setAttribute('disabled', true);
+    }
+    setTimeout(clickCooldown_enableCells, length);
+}
+
+function clickCooldown_enableCells(){
+    let cells = document.getElementsByClassName('Cells');
+    for(let i = 0; i < cells.length; i++) {
+       cells[i].removeAttribute('disabled');
+    }
+}
+
+function markTrueCells(){
+    score++;
+    let score_text = document.getElementById('Score');
+    score_text.innerHTML = 'Score: ' + score;
+    //
+    lastCell.removeAttribute('onclick');
+    savedCell.removeAttribute('onclick');
+    lastCell = null;
+    savedCell = null;
+}
+
 function closeWrongCells() {
     if (savedCell != null) {
+        lastCell.onclick = null;
         lastCell.click();
-        savedCell.removeAttribute('onclick');
+        lastCell.onclick = onCellClick;
+        savedCell.onclick = null;
         savedCell.click();
         savedCell.onclick = onCellClick;
         savedCell = null;
         lastCell = null;
     }
-
 }
 
 function disableCell() {
+
     this.setAttribute('disabled', true);
     lastCell = null;
 }
