@@ -241,8 +241,18 @@
     background-position: center;
 }
 
+.Cells.DNK:checked {
+    background-image: none;
+    background-color: white;
+}
+
 .Cells.Karp {
     background-image: url('../source/karp.jpg');
     background-size: 150%;
     background-position: center;
+}
+
+.Cells.Karp:checked {
+    background-image: none;
+    background-color: white;
 }
